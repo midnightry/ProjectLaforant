@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laforant</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="icon" href="../images/crosshair.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+<!-- Header -->
+    <nav>
+      <div class="logo">
+        <a href="homepage.html"><img src="../images/logo2.png" alt="logo"></a>
+      </div>
+      <ul>
+        <li><a href="homepage.html" class="nav-links">Home</a></li>
+        <li><a href="#" class="nav-links">Game Info</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="agent.html">Agents</a></li>
+              <li><a href="maps.html">Maps</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="sys.html" class="nav-links">System Requirements</a></li>
+        <li><a href="register.html" class="btn">Register</a></li>
+      </ul>
+      <div class="menu-btn">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <!-- Javascript -->
+    <script src="./../Homepage/homepage.js"></script>
+
+    <!-- Section-->
+  <section class="regist">
+  <div class="container">
+    <div class="title">Pre-Registration</div>
+    <div class="content">
+      <form action="#">
+
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" id="username" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" id="password" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" id="confirm" placeholder="Re-enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date of birth</span>
+            <input type="date" id="date" placeholder="Your birth date" required>
+          </div>
+        <div class="input-box">
+          <span class="details">Nationality</span>
+          <input type="text" id="nationality" list="nation" placeholder="Enter your nationality" required>
+          <datalist id="nation">
+            <option value="Indonesia">
+            <option value="Malaysia">
+            <option value="Singapore">
+            <option value="Philippines">
+            <option value="Thailand">
+            <option value="Brunei">
+            <option value="Laos">
+            <option value="Vietnam">
+            <option value="Myanmar">       
+            <option value="China"></option>
+            <option value="India"></option>
+            <option value="Pakistan"></option>
+            <option value="Bangladesh"></option>
+            <option value="Japan"></option>
+            <option value="Turkey"></option>
+            <option value="Iran"></option>
+            <option value="South Korea"></option>
+            <option value="Iraq"></option>
+            <option value="Afghanistan"></option>
+            <option value="Saudi Arabia"></option>
+            <option value="Uzbekistan"></option>
+            <option value="Nepal"></option>
+            <option value="United Arab Emirates"></option>
+            <option value="Hong Kong"></option>
+            <option value="Taiwan"></option>
+            <option value="Australia"></option>
+            <option value="New Zealand"></option>
+            <option value="France"></option>
+            <option value="United Kingdom (UK)"></option>
+            <option value="United States (US)"></option>
+            <option value="Italy"></option>
+            <option value="Germany"></option>
+            <option value="Spain"></option>
+            <option value="Egypt"></option>
+            <option value="Russia"></option>
+            <option value="Ukraine"></option>
+            <option value="Poland"></option>
+            <option value="Netherlands"></option>
+            <option value="Belgium"></option>
+            <option value="Portugal"></option>
+            <option value="Greece"></option>
+            <option value="Sweden"></option>
+            <option value="Czech Republic"></option>
+            <option value="Austria"></option>
+            <option value="Serbia"></option>
+            <option value="Switzerland"></option>
+            <option value="Denmark"></option>
+            <option value="Finland"></option>
+            <option value="Slovakia"></option>
+            <option value="Norway"></option>
+            <option value="Albania"></option>
+            <option value="Slovenia"></option>
+            <option value="Latvia"></option>
+            <option value="Estonia"></option>
+            <option value="Luxembourg"></option>
+            <option value="Iceland"></option>
+            <option value="Monaco"></option>
+            <option value="Liechtenstein"></option>
+            <option value="Brazil"></option>
+            <option value="Mexico"></option>
+            <option value="Argentina"></option>
+            <option value="Colombia"></option>
+            <option value="Canada"></option>
+            <option value="Peru"></option>
+            <option value="Venezuela"></option>
+            <option value="Chile"></option>
+            <option value="Bolivia"></option>
+            <option value="Ecuador"></option>
+            <option value="Haiti"></option>
+            <option value="Costa Rica"></option>
+            <option value="Panama"></option>
+            <option value="Uruguay"></option>
+            <option value="Guatemala"></option>
+            </datalist>
+          </div>
+      </div>
+
+        <div class="input-box">
+          <label class="form-checkbox">
+              <input type="checkbox" name="checkbox" id="agreement" required>
+              <span>I agree to the <a href="#">terms and conditions.</a></span>
+          </label>
+      </div>
+
+        <div class="button">
+          <input type="submit" value="Register" onclick="validate()">
+        </div>
+      </form>
+    </div>
+  </div>
+  </section>
+  
+    <!-- Footer -->
+     <!-- Social Media -->
+     <section class="social-media">
+      <div class="triogames">
+        <img src="../images/triogamesgrey.png" alt="triogames">
+      </div>
+      <div class="media">
+          <a href="https://twitter.com"><img class="twitter" src="../images/twitter.png" alt=""></a>
+          <a href="https://facebook.com"><img class="facebook" src="../images/facebook.png" alt=""></a>
+          <a href="https://instagram.com"><img class="instagram" src="../images/instagram.png" alt=""></a>
+          <a href="https://youtube.com"><img class="youtube" src="../images/youtube.png" alt=""></a>
+      </div>
+      <p>Copyright © 2021 Trio Games All Rights Reserved</p>
+    </section>
+  </body>
+  <script src="register.js"></script>
+</html>

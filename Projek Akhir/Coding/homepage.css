@@ -1,0 +1,516 @@
+/* Body */
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Header */
+nav{
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  z-index: 999;
+}
+
+nav .logo img{ 
+  width: 95px;
+  height: 65px;
+}
+
+ul{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  margin-top: 13px;
+}
+ul li{
+  position: relative;
+}
+
+ul li .nav-links{
+  color: black;
+  font-weight: 400;
+}
+
+ul li .nav-links:hover{
+  color: #00b0f2;
+  transition: 0.2s;
+}
+
+.dropdown{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: white;
+}
+
+.dropdown ul{
+  display: block;
+  margin: 2px;
+}
+
+.dropdown ul li{
+  width: 78px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 4px;
+}
+
+.dropdown ul li a{
+  color: black;
+  font-weight: 400;
+}
+
+.dropdown{
+  display: none;
+}
+
+ul li:hover .dropdown{
+  display: block;
+}
+
+.dropdown ul li:hover{
+  background-color: #00b0f2;
+}
+
+.dropdown ul li:hover a{
+  color: white;
+}
+
+ul li .btn{
+  color: rgb(255, 255, 255);
+  background-color:  rgb(255, 0, 0);
+  border: 3px solid black;
+  border-bottom-left-radius: 22px;
+  border-top-right-radius: 22px;
+  font-weight: 600;
+  padding: 10px 13px;
+}
+
+ul li .btn:hover{
+  color: black;
+  background-color: yellow;
+  transition: 0.2s;
+}
+
+.menu-btn{
+  display: none;
+  cursor: pointer;
+}
+
+.menu-btn div{
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px){
+  ul{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:800px){
+  body{
+    overflow-x: hidden;
+  }
+  ul{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 12vh;
+    background-color: #00b0f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    font-size: 30px;
+  }
+  ul li{
+    opacity: 0;
+  }
+  ul li .nav-links:hover{
+    color: black;
+  }
+  ul li .nav-links:active{
+    color: white;
+  }
+  ul li .btn:hover{
+    color: white;
+    background-color: red;
+  }
+  ul li .btn{
+    color: rgb(255, 255, 255);
+    background-color:  rgb(255, 0, 0);
+    border-bottom-left-radius: 22px;
+    border-top-right-radius: 22px;
+    font-weight: 600;
+    padding: 10px 13px;
+  }
+  ul li .btn:active{
+    color: black;
+    background-color: yellow;
+  }
+  .menu-btn{
+    display: block;
+  }
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+  opacity: 0;
+}
+
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* Introduction */
+.introduction{
+  background-color: #00b0f2;
+  height: 550px;
+}
+
+.introduction .text{
+  padding-left: 125px;
+  padding-top: 150px;
+}
+
+.introduction .text h1{
+  font-size: 5vw;
+  color: white;
+}
+
+.textline{
+  width: 25%;
+  height: 3px;
+  background-color: white;
+  justify-content: center;
+}
+
+.introduction .text p{
+  padding-left: 2%;
+  padding-top: 10%;
+  width: 30%;
+  line-height: 1.4;
+}
+
+.introduction .text .first-p{
+  font-size: 2vw;
+  font-weight: 400;
+  color: white;
+}
+
+.introduction .text .second-p{
+  padding-top: 1%;
+  font-size: 1.2vw;
+  color: rgb(0, 0, 0);
+}
+
+.introduction .gameplay{
+  margin-top: -19%;
+  margin-right: 10%;
+}
+
+.introduction .gameplay img{
+  width: 52%;
+  float: right;
+}
+
+@media screen and (max-width:1024px){
+  .introduction{
+    height: 770px;
+  }
+}
+
+@media screen and (max-width:800px){
+  .introduction .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+    padding-top: 30%;
+  }
+  .introduction .text h1{
+    font-size: 10vw;
+  }
+  .introduction .text p{
+    padding-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+  }
+  .introduction .text .first-p{
+    font-size: 4vw;
+    font-weight: 400;
+  }
+  .introduction .text .second-p{
+    padding-top: 4%;
+    text-align: center;
+    font-size: 2vw;
+    color: rgb(0, 0, 0);
+  }
+  .introduction .gameplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 6%;
+  }
+  .introduction .gameplay img{
+    width: 80%;
+  }
+}
+
+/* Agents Preview */
+
+.agentssect{
+  width: 100%;
+  display: flex;
+}
+
+.agentssect .agentpicture{
+  margin-top: 4%;
+  margin-left: 6%;
+}
+
+.agentssect img{
+  width: 70%;
+}
+
+.agentssect .textagent{
+  margin-top: 20%;
+  margin-left: -10%;
+}
+
+.agentssect .textagent h1{
+  color: #00b0f2;
+  font-size: 4vw;
+}
+
+.agentssect .textagent p{
+  line-height: 1.4;
+  padding: 2% 0%;
+}
+
+.agentssect .textagent .textline2{
+  color: #00b0f2;
+  font-size: 1.5vw;
+}
+
+@media screen and (max-width:800px){
+  .agentssect{
+    flex-direction: column;
+  }
+  .agentssect .agentpicture{
+    margin: 20% 0% 0% 15%;
+  }
+  .agentssect .textagent{
+    margin: auto;
+  }
+  .agentssect .textagent h1{
+    font-size: 8vw;
+  }
+  .agentssect .textagent p{
+    padding: 2% 0%;
+  }
+  .agentssect .textagent .textline2{
+    color: #00b0f2;
+    font-size: 4vw;
+  }
+  .agentssect .textagent .textline3{
+    padding-bottom: 50px;
+    font-size: 3vw;
+  }
+}
+
+/* Maps Preview */
+
+.mapssect{
+  position: relative;
+  text-align: center;
+}
+
+.mapssect img{
+  opacity: 0.5;
+}
+
+.mapssect .textmaps{
+  position: absolute;
+  font-size: 6vw;
+  font-weight: bold;
+  left: 15%;
+  top: 20%;
+  color: rgb(1, 4, 46);
+}
+
+.mapssect .ptext{
+  position: absolute;
+  color: rgb(1, 4, 46);
+  font-size: 2.5vw;
+  left: 16%;
+  top: 32%;
+}
+
+.mapssect .ptext2{
+  position: absolute;
+  color: rgb(1, 4, 46);
+  font-size: 1.4vw;
+  left: 16%;
+  top: 40%;
+}
+
+.mapssect .ptext3{
+  position: absolute;
+  color: rgb(1, 4, 46);
+  font-size: 1.4vw;
+  left: 16%;
+  top: 42.5%;
+}
+
+.mapssect .ptext4{
+  position: absolute;
+  color: rgb(1, 4, 46);
+  font-size: 1.4vw;
+  left: 16%;
+  top: 45.2%;
+}
+
+.mapssect .ptext5{
+  position: absolute;
+  color: rgb(1, 4, 46);
+  font-size: 1.4vw;
+  left: 16%;
+  top: 47.8%;
+}
+
+@media screen and (max-width:800px){
+  .mapssect .textmaps{
+    font-size: 9vw;
+  }
+  .mapssect .ptext{
+    font-size: 4vw;
+    top: 34%;
+  }
+  .mapssect .ptext2{
+    font-size: 2vw;
+    top: 43%;
+  }
+  .mapssect .ptext3{
+    font-size: 2vw;
+    top: 47%;
+  }
+  .mapssect .ptext4{
+    font-size: 2vw;
+    top: 51%;
+  }
+  .mapssect .ptext5{
+    font-size: 2vw;
+    top: 54.5%;
+  }
+}
+
+/* Social Media */
+
+.social-media{
+  background-color: #111111;
+  margin-top: -0.4%;
+}
+
+.social-media .triogames{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.social-media .triogames img{
+  width: 100px;
+  padding-top: 50px;
+}
+
+.social-media .media{
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media .media a{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media .media a img.twitter{
+  width: 55%;
+}
+
+.social-media .media a img.facebook{
+  width: 80%;
+}
+
+.social-media .media a img.instagram{
+  width: 55%;
+}
+
+.social-media .media a img.youtube{
+  width: 125%;
+}
+
+.social-media p{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: #756060;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width:800px){
+  .social-media p{
+    font-size: 2vw;
+  }
+  .social-media .media a{
+    width: 8%;
+    height: 8%;
+  }
+  .social-media .triogames img{
+    width: 17%;
+  }
+}
